@@ -19,6 +19,7 @@ Position: BaaS Middle PHP Developer
 1. Create a new bugfix/issues branch to work on
 2. Find all the TODOs and solve the problems
 3. Archive your project.
-4. Archive your project in .zip and save it to Dropbox or Google Drive.
+4. Archive your project in .zip and save it to Dropbox or Google Drive. Please give the archive your first and last
+   name. For example: alex-reznovs.zip
 5. Send a link to your archive.
 6. Wait for an answer.
