@@ -15,6 +15,13 @@ class EmployeeRepository implements EmployeeRepositoryInterface
     {
         // TODO: 3. Third issue. Need get ACTIVE employees by department a
 
-        return Employee::query();
+        return Employee::select(
+            "users.name",
+            "departments.name"
+        )
+        ->join("users", "users.id", '=', "employees.user_id")
+        ->join("departments", "departments.id", '=', "employees.department_id")
+        ->where("departments.name", '=', "a")
+        ->where("employees.status", '=', 1)->get();
     }
 }
