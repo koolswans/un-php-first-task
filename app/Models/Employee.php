@@ -24,12 +24,18 @@ class Employee extends Model
         return $this->belongsTo(Department::class, 'department_id');
     }
 
-    public function user(): BelongsTo{
+    public function user(): BelongsTo
+    {
         return $this->belongsTo(User::class, 'user_id');
     }
 
     public function getStatus(): EmployeeStatusEnum
     {
         return EmployeeStatusEnum::fromId($this->status);
+    }
+
+    public function scopeActive()
+    {
+        return $this->where('status', EmployeeStatusEnum::ACTIVE->id());
     }
 }
